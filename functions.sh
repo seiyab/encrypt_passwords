@@ -28,3 +28,7 @@ function decpass() {
         echo "Password doesn't exist."
     fi
 }
+
+function uppass() {
+    rsync --chmod=u+w $MY_PASSWORDS/*.txt.enc vps:/home/core/pass/
+}
